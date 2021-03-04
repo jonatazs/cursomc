@@ -1,7 +1,10 @@
 package com.jonatas.cursomc.domain;
 
+import javax.persistence.Entity;
+
 import com.jonatas.cursomc.domain.enums.EstadoPagamento;
 
+@Entity
 public class PagamentoComCartao extends Pagamento {
 
 	
@@ -12,11 +15,14 @@ public class PagamentoComCartao extends Pagamento {
 	
 	}
 
-	public PagamentoComCartao(Integer id, EstadoPagamento estado, Pedido pedido, Integer numeroDePInteger, Integer numeroDeParcelas) {
+	
+
+	public PagamentoComCartao(Integer id, EstadoPagamento estado, Pedido pedido, Integer numeroDeParcelas) {
 		super(id, estado, pedido);
 		this.numeroDeParcelas = numeroDeParcelas;
-		
 	}
+
+
 
 	public Integer getNumeroDeParcelas() {
 		return numeroDeParcelas;
